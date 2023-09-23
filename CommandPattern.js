@@ -15,7 +15,7 @@ class CalculatorCommand {
  }
 }
 // Command objects
-const DoAddition = value => new CalculatorCommand(addNumbers, subNumbers, value);
+const DoAddition = value => new CalculatorCommand(addNumbers, subNumbers, value); //constructor needs to be invoked using new keyword..so new  object is created
 const DoSubtraction = value => new CalculatorCommand(subNumbers, addNumbers, value);
 const DoMultiplication = value => new CalculatorCommand(multiplyNumbers, divideNumbers, value);
 const DoDivision = value => new CalculatorCommand(divideNumbers, multiplyNumbers, value);
@@ -46,10 +46,10 @@ class AdvancedCalculator {
 const advCal = new AdvancedCalculator();
  
 // invoking commands
-advCal.execute( DoAddition(50)); //50
-advCal.execute( DoSubtraction(25)); //25
+advCal.execute( DoAddition(50));      //50
+advCal.execute( DoSubtraction(25));   //25
 advCal.execute( DoMultiplication(4)); //100
-advCal.execute( DoDivision(2)); //50
+advCal.execute( DoDivision(2));       //50
  
 // undo commands
 advCal.undo();
